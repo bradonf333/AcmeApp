@@ -11,6 +11,13 @@ namespace Acme.Biz
     /// </summary>
     public class Product
     {
-        
+        private string productName;
+        private string description;
+        private int productId;
+
+        public string ProductName { get; set; }
+        public string Description { get; set; }
+        public int ProductId { get; set; }
+
     }
 }
