@@ -14,7 +14,18 @@ namespace Acme.Biz.Tests
         [TestMethod()]
         public void SayHelloTest()
         {
-            Assert.Fail();
+            // Set up test
+            var currentProduct = new Product();
+            currentProduct.ProductName = "Saw";
+            currentProduct.ProductId = 1;
+            currentProduct.Description = "15-inch steel blade hand saw";
+            var expected = "Hello Saw (1): 15-inch steel blade hand saw";
+
+            // Call method
+            var actual = currentProduct.SayHello();
+
+            // Test method
+            Assert.AreEqual(expected, actual);
         }
     }
 }
