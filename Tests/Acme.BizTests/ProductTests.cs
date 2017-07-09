@@ -27,5 +27,19 @@ namespace Acme.Biz.Tests
             // Test method
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod()]
+        public void SayHelloTest_ParameterizedConstructor()
+        {
+            // Set up test
+            var currentProduct = new Product(1, "Saw", "15-inch steel blade hand saw");
+            var expected = "Hello Saw (1): 15-inch steel blade hand saw";
+
+            // Call method & store result
+            var actual = currentProduct.SayHello();
+
+            // Test method
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
