@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Acme.Common;
 using System;
 using System.Collections.Generic;
@@ -15,11 +15,10 @@ namespace Acme.Common.Tests
         public void LogAction_Success()
         {
             // Arrange
-            var loggingService = new LoggingService();
-            var expected = "Action: Test Action";
+           var expected = "Action: Test Action";
 
             // Act
-            var actual = loggingService.LogAction("Test Action");
+            var actual = LoggingService.LogAction("Test Action");
 
             // Assert
             Assert.AreEqual(expected, actual);
