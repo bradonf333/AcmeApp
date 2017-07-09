@@ -19,5 +19,10 @@ namespace Acme.Biz
         public string Description { get; set; }
         public int ProductId { get; set; }
 
+        public string SayHello()
+        {
+            return $"Hello {ProductName} {ProductId} {Description}";
+        }
+
     }
 }
